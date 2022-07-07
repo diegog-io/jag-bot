@@ -1,0 +1,10 @@
+{
+	"name": "jag-bot-dev",
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+	"features": {
+		"python": "latest",
+		"docker-in-docker": "latest"
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "python.pythonPath": "/usr/local/python/bin/python",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "python.linting.pylintArgs": [
+    "--indent-string='  '"
+  ],
+  "python.formatting.autopep8Args": [
+    "--indent-size=2"
+  ],
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "autopep8"
+}
