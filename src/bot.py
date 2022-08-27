@@ -13,6 +13,6 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.default())
-await set_up_cogs(bot)
+set_up_cogs(bot)
 
 bot.run(Config.discord_key)
