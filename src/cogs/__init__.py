@@ -8,10 +8,10 @@ from . import (
 )
 
 
-def setup(bot):
+def async setup(bot):
   """Setup all cogs"""
 
-  general.setup(bot)
-  cat.setup(bot)
-  dog.setup(bot)
-  sudoku.setup(bot)
+  await general.setup(bot)
+  await cat.setup(bot)
+  await dog.setup(bot)
+  await sudoku.setup(bot)
