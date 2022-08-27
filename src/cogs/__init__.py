@@ -8,7 +8,7 @@ from . import (
 )
 
 
-def async setup(bot):
+async def setup(bot):
   """Setup all cogs"""
 
   await general.setup(bot)
