@@ -1,6 +1,7 @@
 """Sets up and adds the bot to it's servers"""
 
 import logging
+import discord
 from discord.ext import commands
 from config import Config
 from cogs import setup as set_up_cogs
@@ -11,7 +12,7 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='!', intents=discord.Intents.default())
 set_up_cogs(bot)
 
 bot.run(Config.discord_key)
