@@ -20,6 +20,6 @@ class SudokuCog(commands.Cog):
     await ctx.channel.send(url)
 
 
-def setup(bot):
+async def setup(bot):
   """Eases the setup of the cog. to be used in /src/bot.py"""
-  bot.add_cog(SudokuCog(bot))
+  await bot.add_cog(SudokuCog(bot))

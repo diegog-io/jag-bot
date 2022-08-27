@@ -29,7 +29,7 @@ class CatCog(commands.Cog):
     await ctx.channel.send(fact)
 
 
-def setup(bot):
+async def setup(bot):
   """Eases the setup of the cog. to be used in /src/bot.py"""
 
-  bot.add_cog(CatCog(bot))
+  await bot.add_cog(CatCog(bot))

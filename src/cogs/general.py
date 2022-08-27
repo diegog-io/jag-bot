@@ -52,7 +52,7 @@ Let jäger#0047 know if you have any suggestions")
     await ctx.channel.send('pong');
 
 
-def setup(bot):
+async def setup(bot):
   """Eases the setup of the cog. to be used in /src/bot.py"""
 
-  bot.add_cog(GeneralCog(bot))
+  await bot.add_cog(GeneralCog(bot))
