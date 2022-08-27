@@ -35,12 +35,14 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          envFrom:
+          - secretRef:
+              name: {{ include "jag-bot.name" . }}-secrets
           env:
-            - name: DISCORD_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: {{ include "jag-bot.name" . }}-secrets
-                  key: DISCORD_KEY
+          {{- range $index, $value := .Values.envs }}
+            - name: {{ $index | quote }}
+              value: {{ $value | quote }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
